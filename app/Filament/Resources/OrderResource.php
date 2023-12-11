@@ -66,6 +66,9 @@ class OrderResource extends Resource
                 TextColumn::make('produk.nama_produk')
                     ->searchable()
                     ->sortable(),
+                TextColumn::make('jumlah')
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('alamat')
                     ->searchable(),
                 TextColumn::make('no_hp')
