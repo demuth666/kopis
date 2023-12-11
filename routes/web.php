@@ -19,4 +19,5 @@ use App\Http\Controllers\ProdukController;
 Route::get('/', [ProdukController::class, 'index'])->name('index');
 Route::get('/order/{id}', [OrderController::class, 'index'])->name('order');
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+Route::get('/search', [ProdukController::class, 'search'])->name('search');
 

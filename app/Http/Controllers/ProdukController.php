@@ -26,4 +26,14 @@ class ProdukController extends Controller
             'topProduk' => $topProducts
         ]);
     }
+
+    public function search(Request $request)
+    {
+        $input = $request->input('data');
+        $result = Produk::where('nama_produk', 'like', '%' . $input . '%')->get();
+        return view('search', [
+            'produk' => $result,
+            'topProduk' => $result,
+        ]);
+    }
 }
